@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 //import './DropDown.css'; // facultatif si tu veux styliser
 
 function DropDown({ title, children }) {
+
+  // Utilisation de useState pour gérer l'état d'ouverture du dropdown
   const [isOpen, setIsOpen] = useState(false);
 
+  // Fonction pour basculer l'état du dropdown
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
