@@ -6,7 +6,11 @@
 
   &__logo {
     width: 210px;
-    height: 68px
+    height: 68px;
+    @media screen and (max-width: 768px) {
+      width: 145px;
+      height: auto;
+    }
   }
 
   &__links {
@@ -15,7 +19,8 @@
 
     & a {
       text-decoration: none;
-      color: #333;
+      color: black;
+      font-size: clamp(1.1rem, 4vw, 2.4rem);
 
       &:hover {
         text-decoration: underline;
