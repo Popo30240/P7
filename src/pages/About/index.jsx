@@ -1,4 +1,3 @@
-import React from 'react';
 import DropDown from '../../components/DropDown';
 
 function APropos() {
