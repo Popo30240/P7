@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
+import './Home.scss';
+
 function Card() {
   const [Data, setData] = useState([]);
   const navigate = useNavigate();
@@ -25,12 +27,13 @@ function Card() {
   }, [navigate]);
 
   return (
-    <div className="card-container">
+    <div className="container__home">
       {Data.map((logement) => (
-        <Link to={`/accommodation/${logement.id}`} key={logement.id}>
-          <div className="card">
+        <Link
+          to={`/accommodation/${logement.id}`}
+          key={logement.id}
+          className="container__home--card">
             <p>{logement.title}</p>
-          </div>
         </Link>
       ))}
     </div>

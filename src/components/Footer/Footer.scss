@@ -1,0 +1,15 @@
+@import '../../styles/abstracts/variables';
+
+.container__footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black;
+  color: $color-white;
+  &--logo {
+    margin: 40px;
+  }
+}

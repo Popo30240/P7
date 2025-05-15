@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route ,  Navigate} from "react-router";
 import ReactDOM from "react-dom/client";
 
+import './styles/style.scss';
+
 // Components
 import Banner from './components/Banner';
 import NavBar from './components/NavBar';
@@ -22,25 +24,29 @@ const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
-  <NavBar />
-  <main>
-    <Routes>
-        <Route path="/" element={<>
-          <Navigate to="/home" />
-        </>} />
-        <Route path="/home" element={<>
-          <Banner image={defaultImage} showTitle={true} />
-          <Card />
-        </>} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="/accommodation/:id" element={<AccommodationDetails />} />
-        <Route path="/about" element={<>
-          <Banner image={BannerAbout} showTitle={false} />
-          <APropos />
-        </>} />
-        <Route path="*" element={<NotFound />} />
-    </Routes>
-  </main>
+  <div className="container__max1440">
+    <header>
+      <NavBar />
+    </header>
+    <main>
+      <Routes>
+          <Route path="/" element={<>
+            <Navigate to="/home" />
+          </>} />
+          <Route path="/home" element={<>
+            <Banner image={defaultImage} showTitle={true} />
+            <Card />
+          </>} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="/accommodation/:id" element={<AccommodationDetails />} />
+          <Route path="/about" element={<>
+            <Banner image={BannerAbout} showTitle={false} />
+            <APropos />
+          </>} />
+          <Route path="*" element={<NotFound />} />
+      </Routes>
+    </main>
+  </div>
   <Footer />
   </BrowserRouter>
 );

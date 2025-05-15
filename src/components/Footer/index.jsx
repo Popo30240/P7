@@ -1,10 +1,11 @@
 import logo from '../../assets/logo/logo-white.png';
+import './Footer.scss';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto text-center">
-        <img src={logo} alt="Logo Kasa" className="mb-4" />
+    <footer>
+      <div className="container__footer">
+        <img src={logo} alt="Logo Kasa" className="container__footer--logo" />
         <p>&copy; 2020 Kasa. All rights reserved</p>
       </div>
     </footer>
