@@ -1,0 +1,92 @@
+@import '../../styles/abstracts/variables';
+
+.card {
+  max-width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+    &__image {
+      width: 100%;
+      height: 415px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    &__contenair {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      font-size: 1.5rem;
+      color: $color-red;
+      margin-bottom: 0.25rem;
+      font-weight: normal;
+    }
+    &__town {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    &__tags span {
+      background-color: $color-red;
+      color: $color-white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    &__Contenair-rating-host {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+    &__rating {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    &__host {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    &__host p {
+      font-size:1rem;
+      color: $color-red;
+    }
+    &__host-picture {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $color-red;
+    }
+    &-contenair__DropDown{
+      display:flex;
+      gap:5rem;
+    }
+    &__description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: $color-gray-dark;
+    }
+    &__equipments {
+      list-style-type: none;
+      color: $color-gray-dark;
+      font-size: 0.95rem;
+    }
+  }
+
+.star {
+  fill: #e3e3e3; /* étoile vide par défaut */
+}
+.star.filled {
+  fill: $color-red; /* étoile pleine */
+}
+

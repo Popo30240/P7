@@ -5,7 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  background-color: #F6F6F6;
+  background-color: $color-gray;
   border-radius: 25px;
   margin-bottom: 2%;
   @media screen and (max-width: 768px) {
@@ -26,7 +26,7 @@
   }
 
   & p {
-    font-size: clamp(1rem, 4vw, 2.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
   }
 
 }

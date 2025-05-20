@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-//import './DropDown.css'; // facultatif si tu veux styliser
+import './DropDown.scss';
+import arrowIcon from '../../assets/icones/arrow_right.png'; 
 
 function DropDown({ title, children }) {
-
-  // Utilisation de useState pour gérer l'état d'ouverture du dropdown
   const [isOpen, setIsOpen] = useState(false);
 
-  // Fonction pour basculer l'état du dropdown
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
     <div className="dropdown">
-      <button className="dropdown-header" onClick={toggleDropdown}>
-        {title}
-        <span className="dropdown-icon">{isOpen ? '▲' : '▼'}</span>
+      <button className="dropdown__header" onClick={toggleDropdown}>
+        <span className="dropdown__title">{title}</span>
+        <img
+          src={arrowIcon}
+          alt="flèche"
+          className={`dropdown__icon ${isOpen ? 'rotated' : ''}`}
+        />
       </button>
-      {isOpen && <div className="dropdown-content">{children}</div>}
+      <div className={`dropdown__content ${isOpen ? 'open' : ''}`}>
+        {children}
+      </div>
     </div>
   );
 }
