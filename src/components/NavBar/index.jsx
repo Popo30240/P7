@@ -7,7 +7,7 @@ function NavBar() {
             <nav className='navBar'>
                 <img src={logo} alt='Logo du site Kasa' className='navBar__logo' />
                 <div className='navBar__links'>
-                    <Link to="/home">Accueil</Link>
+                    <Link to="/">Accueil</Link>
                     <Link to="/about">A propos</Link>
                 </div>
             </nav>

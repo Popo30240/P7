@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import './Home.scss';
+// Components
+import Card from '../../components/Card';
+import Banner from '../../components/Banner';
 
-function Card() {
+function Home() {
   const [Data, setData] = useState([]);
   const navigate = useNavigate();
 
@@ -27,17 +29,15 @@ function Card() {
   }, [navigate]);
 
   return (
-    <div className="container__home">
-      {Data.map((logement) => (
-        <Link
-          to={`/accommodation/${logement.id}`}
-          key={logement.id}
-          className="container__home--card">
-            <p>{logement.title}</p>
-        </Link>
-      ))}
-    </div>
+    <main>
+      <Banner />
+      <div className="container-home">
+        {Data.map((logement) => (
+          <Card key={logement.id} logement={logement} />
+        ))} 
+      </div>
+    </main>
   );
 }
 
-export default Card;
+export default Home;
