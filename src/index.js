@@ -3,9 +3,6 @@ import ReactDOM from "react-dom/client";
 
 import './styles/style.scss';
 
-// paramètrage de la bannière avec une autre image et sans titre
-
-
 // Components
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -24,15 +21,18 @@ ReactDOM.createRoot(root).render(
       <header>
         <NavBar />
       </header>
-      <Routes>
-          <Route path="/" element={< Home />} />
-          {/* <Route path="/" element={<><Banner />< Home /></>} /> */}
-          <Route path="/404" element={<NotFound />} />
-          <Route path="/accommodation/:id" element={<AccommodationDetails />} />
-          <Route path="/about" element={< About />} />
-          <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <Routes>
+            <Route path="/" element={< Home />} />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="/accommodation/:id" element={<AccommodationDetails />} />
+            <Route path="/about" element={< About />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>  
+      </main>
     </div>
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
   </BrowserRouter>
 );

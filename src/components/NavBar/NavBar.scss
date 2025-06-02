@@ -22,7 +22,11 @@
     & a {
       text-decoration: none;
       color: black;
-      font-size: $font-size-responsive;
+      font-size: clamp(0.8rem, 2vw, 1.4rem);
+      font-weight: 500;
+      @media screen and (max-width: 768px) {
+        text-transform: uppercase;
+      }
 
       &:hover {
         text-decoration: underline;

@@ -2,7 +2,6 @@
 
 .container__footer {
   width: 100%;
-  height: 36vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,15 +9,20 @@
   padding: 20px;
   background-color: black;
   color: $color-white;
+  margin-top: 2%;
   &--logo {
-    margin:2.5%;
+    margin-top: 2%;
     @media screen and (max-width: 768px) {
       width: 122px;
       height: auto;
     }
   }
   & p {
-    margin:2.5%;
+    margin-top: 3%;
     font-size: 1rem;
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+      max-width: 31%;
+    }
   }
 }

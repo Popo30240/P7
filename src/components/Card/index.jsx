@@ -5,9 +5,9 @@ function Card({ logement }) {
   return (
     <Link
       to={`/accommodation/${logement.id}`}
-      className="container-home__card"
+      className="container-home__Card"
       style={{
-        backgroundImage: `url(${logement.cover})`,
+        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(${logement.cover})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

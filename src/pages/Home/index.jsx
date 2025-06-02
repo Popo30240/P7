@@ -29,14 +29,14 @@ function Home() {
   }, [navigate]);
 
   return (
-    <main>
+    <div>
       <Banner />
       <div className="container-home">
         {Data.map((logement) => (
           <Card key={logement.id} logement={logement} />
         ))} 
       </div>
-    </main>
+    </div>
   );
 }
 

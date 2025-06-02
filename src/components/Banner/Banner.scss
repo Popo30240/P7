@@ -21,9 +21,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $color-white;
-    font-size: clamp(1rem, 4vw, 2.4rem);
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
     font-weight: 700;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      text-align:left;
+      left:37%;
+      
+    }
   }
 
     // VERSION MOBILE
