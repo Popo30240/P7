@@ -3,8 +3,10 @@ import './DropDown.scss';
 import arrowIcon from '../../assets/icones/arrow_right.png'; 
 
 function DropDown({ title, children }) {
+  // On utilise useState pour initialiser l'état isOpen à false
   const [isOpen, setIsOpen] = useState(false);
-
+  // Fonction permet d'inverser la valeur de isOpen
+  // Si isOpen est true, il devient false et vice versa
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (

@@ -7,10 +7,17 @@ import SlideShow from '../../components/SlideShow';
 import DropDown from '../../components/DropDown';
 
 function AccommodationDetails() {
-  const { id } = useParams(); // récupère l'ID de l'URL
+  // ce hook permet de récupérer l'id de l'URL
+  const { id } = useParams(); 
+  // useNavigate est un hook qui permet de naviguer vers une autre page
   const navigate = useNavigate();
+  // Un état local pour stocker les données du logement
+  // est initialisé à null
+  // car les données ne sont pas encore chargées
   const [logement, setLogement] = useState(null);
 
+  // Le hook useEffect est utilisé pour lancer la récupération des données
+  // à chaque fois que l’ID ou la fonction navigate
   useEffect(() => {
     fetch('/Data/Data.json')
       .then((response) => {
@@ -20,10 +27,14 @@ function AccommodationDetails() {
         return response.json();
       })
       .then((json) => {
+        // On cherche l'élément du tableau json qui a l'id correspondant à l'id de l'URL
         const item = json.find((logement) => logement.id === id);
+        // Si l'élément n'est pas trouvé, on redirige vers la page 404
         if (!item) {
           navigate('/404');
         } else {
+          // Sinon, on met à jour l'état local avec les données du logement
+          // et on les affiche dans le composant
           setLogement(item);
         }
       })

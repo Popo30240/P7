@@ -6,12 +6,20 @@ import arrow_Right from '../../assets/icones/arrow_right.png';
 import './SlideShow.scss';
 
 function SlideShow(pictures) {
+    // On utilise useState pour gérer l'index de l'image actuelle
+    // currentIndex est l'état qui stocke l'index de l'image actuelle
     const [currentIndex, setCurrentIndex] = useState(0);
     
+    // Cette fonction permet de passer à l'image suivante
+    // Si on est à la dernière image, on revient à la première grâce à l'opérateur modulo
+    // Et setCurrentIndex est une fonction qui met à jour l'état currentIndex
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.pictures.length);
     };
     
+    // Cette fonction permet de revenir à l'image précédente
+    // Si l'index est à 0, on fait la taille du tableau - 1
+    // Sinon on décrémente l'index de 1
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? pictures.pictures.length - 1 : prevIndex - 1

@@ -25,7 +25,7 @@ function Home() {
           navigate('/404');
         } else {
           // Si les données sont valides, on les stocke dans l'état
-          // setData est une fonction qui met à jour l'état data
+          // setData est une fonction qui met à jour l'état data      
           setData(json);
         }
       } catch (error) {
@@ -34,7 +34,7 @@ function Home() {
       }
     };
     // useEffect est un hook qui permet d'exécuter du code après le rendu du composant
-    // Appel de la fonction fetchData pour récupérer les donnée
+    // Appel de la fonction fetchData pour récupérer les données
     fetchData();
   }, [navigate]); // Si on est redirigé vers une autre page,
   //  on re-exécute le code jusqu'à ce que les données valides soient chargées .
